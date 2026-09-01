@@ -1,171 +1,1161 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="About Anchor & Sterling LLP.">
-    <link rel="stylesheet" href="../assets/style.css">
-    <title>
-      The Firm | Anchor & Sterling LLP
-    </title>
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">
-      Skip to main content
-    </a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <header class="site-header">
-      <div class="nav-shell">
-        <a class="wordmark" href="../">
-          Anchor
-          <span>
-            &amp;
-          </span>
-          Sterling
-          <em>
-            LLP
-          </em>
+  <meta
+    name="description"
+    content="Anchor & Sterling LLP — a litigation-focused law firm built around disciplined thinking, direct counsel, and sustained client relationships."
+  >
+
+  <meta name="theme-color" content="#102b3b">
+
+  <title>The Firm | Anchor & Sterling LLP</title>
+
+  <style>
+    :root {
+      color-scheme: light;
+
+      --ink: #102b3b;
+      --ink-soft: #183c50;
+      --paper: #f7f8f7;
+      --white: #ffffff;
+      --orange: #e66f27;
+      --orange-deep: #bd4f16;
+      --orange-pale: #fff1e8;
+      --line: #cbd7dc;
+      --muted: #50626d;
+
+      --serif:
+        "Iowan Old Style",
+        "Palatino Linotype",
+        Palatino,
+        Georgia,
+        serif;
+
+      --sans:
+        "Avenir Next",
+        Avenir,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font: 16px/1.7 var(--sans);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 4px;
+    }
+
+    /* =========================
+       ACCESSIBILITY
+       ========================= */
+
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: -5rem;
+      background: var(--white);
+      color: var(--ink);
+      padding: .7rem 1rem;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    .site-header {
+      background: var(--white);
+      color: var(--ink);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 5px 18px rgba(16, 43, 59, .05);
+    }
+
+    .nav-shell {
+      width: min(1180px, 100%);
+      min-height: 104px;
+      margin: 0 auto;
+      padding: 0 2rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+
+      position: relative;
+    }
+
+    /* =========================
+       WORDMARK
+       ========================= */
+
+    .wordmark {
+      color: var(--ink);
+      text-align: center;
+      text-decoration: none;
+
+      font: 400 1.65rem/.85 var(--serif);
+      letter-spacing: .06em;
+
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .wordmark::before {
+      content: "LITIGATION · DISPUTES";
+
+      color: var(--orange);
+
+      display: block;
+
+      font: 700 .51rem var(--sans);
+      letter-spacing: .24em;
+
+      margin-bottom: .65rem;
+    }
+
+    .wordmark span {
+      color: var(--orange);
+      font-style: italic;
+    }
+
+    .wordmark em {
+      display: block;
+
+      color: var(--ink);
+
+      font: 700 .51rem var(--sans);
+      letter-spacing: .3em;
+
+      margin-top: .55rem;
+    }
+
+    /* =========================
+       NAVIGATION
+       ========================= */
+
+    .primary-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      gap: 1.25rem;
+      margin-left: auto;
+    }
+
+    .primary-nav a {
+      color: var(--ink);
+
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+
+      text-decoration: none;
+      text-transform: uppercase;
+
+      white-space: nowrap;
+    }
+
+    .primary-nav a:hover,
+    .primary-nav a[aria-current="page"] {
+      color: var(--orange-deep);
+    }
+
+    .nav-contact {
+      display: inline-block;
+
+      background: var(--orange);
+      border: 1px solid var(--orange);
+
+      color: #fff !important;
+
+      padding: .8rem 1.2rem;
+
+      text-decoration: none;
+
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    .nav-contact:hover {
+      background: var(--orange-deep);
+      border-color: var(--orange-deep);
+
+      transform: translate(1px, 1px);
+
+      box-shadow: 3px 3px 0 var(--ink);
+    }
+
+    .menu-button {
+      display: none;
+
+      color: var(--ink);
+      background: transparent;
+
+      border: 1px solid var(--ink);
+
+      padding: .55rem .75rem;
+
+      text-transform: uppercase;
+      letter-spacing: .05em;
+
+      cursor: pointer;
+    }
+
+    /* =========================
+       PAGE INTRO
+       ========================= */
+
+    .page-intro {
+      background: var(--white);
+
+      padding: 5.8rem 0 4.3rem;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .container {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .breadcrumbs {
+      font-size: .72rem;
+      color: var(--muted);
+
+      margin-bottom: 1.6rem;
+
+      letter-spacing: .05em;
+    }
+
+    .breadcrumbs a {
+      color: var(--muted);
+    }
+
+    .page-intro h1 {
+      max-width: 760px;
+
+      margin: 0;
+
+      color: var(--ink);
+
+      font: 400 clamp(3rem, 6vw, 4.8rem)/.94 var(--serif);
+
+      letter-spacing: -.055em;
+    }
+
+    .page-intro p {
+      max-width: 720px;
+
+      margin: 1.6rem 0 0;
+
+      color: var(--muted);
+
+      font-size: 1.13rem;
+    }
+
+    /* =========================
+       MAIN CONTENT
+       ========================= */
+
+    .section {
+      padding: 6.5rem 0;
+    }
+
+    .section-alt {
+      background: #e8f0f2;
+    }
+
+    .split {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 6rem;
+
+      align-items: start;
+    }
+
+    .label {
+      color: var(--orange-deep);
+
+      font-size: .69rem;
+      font-weight: 700;
+
+      letter-spacing: .16em;
+
+      text-transform: uppercase;
+    }
+
+    .section h2 {
+      margin: 0 0 1.3rem;
+
+      font: 400 clamp(2.15rem, 4vw, 3.35rem)/1.02 var(--serif);
+
+      letter-spacing: -.045em;
+    }
+
+    .section h3 {
+      margin: .3rem 0 .9rem;
+
+      font: 400 1.7rem/1.15 var(--serif);
+    }
+
+    .section p {
+      max-width: 700px;
+    }
+
+    .prose {
+      max-width: 790px;
+    }
+
+    .prose p {
+      max-width: 790px;
+    }
+
+    /* =========================
+       PRINCIPLES
+       ========================= */
+
+    .principles-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      margin-top: 3rem;
+
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .principle {
+      background: rgba(255, 255, 255, .45);
+
+      padding: 2rem;
+
+      min-height: 230px;
+
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .principle-number {
+      display: block;
+
+      color: var(--orange);
+
+      font: italic 1.15rem var(--serif);
+
+      margin-bottom: 1rem;
+    }
+
+    .principle h3 {
+      margin-top: 0;
+    }
+
+    .principle p {
+      color: var(--muted);
+
+      font-size: .94rem;
+    }
+
+    /* =========================
+       DARK SECTION
+       ========================= */
+
+    .section-dark {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .section-dark .label {
+      color: #ff9d65;
+    }
+
+    .section-dark p {
+      color: #d4e2e7;
+    }
+
+    .quote {
+      border-left: 3px solid var(--orange);
+
+      padding-left: 2rem;
+
+      margin: 0;
+
+      font: 400 clamp(1.6rem, 3vw, 2.45rem)/1.25 var(--serif);
+    }
+
+    /* =========================
+       CTA
+       ========================= */
+
+    .cta {
+      padding: 5rem 0;
+
+      background: var(--orange);
+
+      color: white;
+    }
+
+    .cta .split {
+      align-items: center;
+    }
+
+    .cta h2 {
+      margin: 0;
+
+      font: 400 clamp(2.1rem, 4vw, 3.45rem)/1.05 var(--serif);
+    }
+
+    .button {
+      display: inline-block;
+
+      background: var(--ink);
+
+      border: 1px solid var(--ink);
+
+      color: #fff !important;
+
+      padding: .9rem 1.3rem;
+
+      text-decoration: none;
+
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+
+      box-shadow: 4px 4px 0 #fff;
+    }
+
+    .button:hover {
+      background: var(--ink-soft);
+
+      transform: translate(1px, 1px);
+
+      box-shadow: 3px 3px 0 #fff;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    .site-footer {
+      background: var(--ink);
+
+      color: #d5e2e6;
+
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns: 1.6fr 1fr 1fr;
+
+      gap: 3rem;
+    }
+
+    .footer-brand {
+      color: #fff;
+
+      text-decoration: none;
+
+      display: inline-block;
+
+      font: 400 1.65rem/.85 var(--serif);
+
+      letter-spacing: .06em;
+    }
+
+    .footer-brand span {
+      color: var(--orange);
+      font-style: italic;
+    }
+
+    .footer-brand em {
+      display: block;
+
+      color: #fff;
+
+      font: 700 .51rem var(--sans);
+
+      letter-spacing: .3em;
+
+      margin-top: .55rem;
+    }
+
+    .footer-title {
+      color: #fff;
+
+      font: 400 1.45rem var(--serif);
+    }
+
+    .footer-links {
+      padding: 0;
+
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin: .65rem 0;
+    }
+
+    .footer-links a {
+      color: #d5e2e6;
+
+      font-size: .85rem;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      margin-top: 3rem;
+
+      padding-top: 1.5rem;
+
+      border-top: 1px solid rgba(213, 226, 230, .25);
+
+      display: flex;
+
+      gap: 1rem;
+
+      justify-content: space-between;
+
+      flex-wrap: wrap;
+
+      color: #b7cbd3;
+
+      font-size: .75rem;
+    }
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 1100px) {
+      .nav-shell {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .primary-nav {
+        gap: .85rem;
+      }
+
+      .primary-nav a {
+        font-size: .61rem;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .nav-shell {
+        min-height: 82px;
+
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+
+        justify-content: center;
+      }
+
+      .wordmark {
+        font-size: 1.3rem;
+      }
+
+      .wordmark::before,
+      .wordmark em {
+        display: none;
+      }
+
+      .menu-button {
+        display: block;
+
+        position: absolute;
+
+        right: 1.25rem;
+      }
+
+      .primary-nav {
+        display: none;
+
+        position: absolute;
+
+        top: 82px;
+        left: 0;
+        right: 0;
+
+        margin: 0;
+
+        padding: 1.2rem 1.25rem 1.6rem;
+
+        background: var(--white);
+
+        border-top: 1px solid var(--line);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 1.15rem;
+
+        box-shadow: 0 10px 20px rgba(16, 43, 59, .1);
+      }
+
+      .primary-nav.open {
+        display: flex;
+      }
+
+      .primary-nav a {
+        font-size: .68rem;
+      }
+
+      .nav-contact {
+        width: 100%;
+
+        text-align: center;
+      }
+
+      .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+
+      .page-intro {
+        padding: 3.8rem 0 3.2rem;
+      }
+
+      .section {
+        padding: 4.2rem 0;
+      }
+
+      .split {
+        grid-template-columns: 1fr;
+
+        gap: 2.5rem;
+      }
+
+      .principles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-shell {
+        min-height: 76px;
+      }
+
+      .primary-nav {
+        top: 76px;
+      }
+
+      .wordmark {
+        font-size: 1.15rem;
+      }
+
+      .page-intro h1 {
+        letter-spacing: -.04em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <!-- =========================
+       HEADER
+       ========================= -->
+
+  <header class="site-header">
+
+    <div class="nav-shell">
+
+      <a
+        class="wordmark"
+        href="/"
+        aria-label="Anchor and Sterling LLP, home"
+      >
+        Anchor <span>&amp;</span> Sterling
+        <em>LLP</em>
+      </a>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-menu"
+        id="menu-button"
+      >
+        <span class="sr-only">Open navigation</span>
+        Menu
+      </button>
+
+      <nav
+        id="primary-menu"
+        class="primary-nav"
+        aria-label="Primary navigation"
+      >
+
+        <a
+          href="/firm/"
+          aria-current="page"
+        >
+          The Firm
         </a>
 
-        <button
-          class="menu-button"
-          type="button"
-          aria-expanded="false"
-          aria-controls="primary-menu"
-          data-menu-button
+        <a href="/litigation-disputes/">
+          Practice Areas
+        </a>
+
+        <a href="/attorneys/">
+          Attorneys
+        </a>
+
+        <a href="/insights/">
+          Insights
+        </a>
+
+        <a href="/careers/">
+          Careers
+        </a>
+
+        <a
+          class="nav-contact"
+          href="/contact/"
         >
-          Menu
-        </button>
+          Contact
+        </a>
 
-        <nav
-          id="primary-menu"
-          class="primary-nav"
-          data-menu
-          aria-label="Primary navigation"
-        >
-          <a aria-current="page" href="../firm/">
-            The Firm
-          </a>
+      </nav>
 
-          <a href="../litigation-disputes/">
-            Practice Areas
-          </a>
+    </div>
 
-          <a href="../attorneys/">
-            Attorneys
-          </a>
+  </header>
 
-          <a href="../insights/">
-            Insights
-          </a>
 
-          <a href="../careers/">
-            Careers
-          </a>
+  <!-- =========================
+       MAIN
+       ========================= -->
 
-          <a class="nav-contact" href="../contact/">
-            Contact
-          </a>
-        </nav>
+  <main id="main-content" tabindex="-1">
+
+    <!-- PAGE INTRO -->
+
+    <section class="page-intro">
+
+      <div class="container">
+
+        <div class="breadcrumbs">
+          <a href="/">Home</a>
+          <span aria-hidden="true"> / </span>
+          <span>The Firm</span>
+        </div>
+
+        <h1>
+          The Firm
+        </h1>
+
+        <p>
+          A litigation-focused firm built around disciplined thinking,
+          direct counsel, and sustained client relationships.
+        </p>
+
       </div>
-    </header>
 
-    <main id="main-content">
-      <section class="page-intro">
-        <div class="container">
-          <p class="breadcrumbs">
-            <a href="../">
-              Home
-            </a>
-            / The Firm
-          </p>
+    </section>
 
-          <h1>
-            The Firm
-          </h1>
 
-          <p>
-            A litigation-focused firm built around disciplined thinking,
-            direct counsel, and sustained client relationships.
-          </p>
-        </div>
-      </section>
+    <!-- ABOUT -->
 
-      <section class="section">
-        <div class="container split">
+    <section class="section">
+
+      <div class="container">
+
+        <div class="split">
+
           <div>
             <span class="label">
-              Our firm
+              Our Approach
             </span>
 
             <h2>
-              Focused where it counts.
+              Built for complex disputes.
             </h2>
           </div>
 
-          <div>
+          <div class="prose">
+
             <p>
-              Anchor &amp; Sterling LLP is a litigation and disputes firm
-              serving clients navigating commercially significant matters.
-              We bring a composed, partner-led approach to each engagement.
+              Anchor &amp; Sterling LLP is a litigation-focused practice
+              serving clients facing consequential disputes and complex
+              legal challenges.
             </p>
 
             <p>
-              Our work is rooted in preparation. We study the facts,
-              identify the leverage, and communicate plainly about risk,
-              options, and likely outcomes.
+              We approach each matter with careful preparation,
+              disciplined analysis, and a clear understanding of the
+              client's commercial and strategic objectives.
             </p>
+
+            <p>
+              Our work is grounded in direct communication, rigorous
+              advocacy, and sustained relationships with the people and
+              organizations we represent.
+            </p>
+
           </div>
+
         </div>
-      </section>
 
-      <section class="section section-alt">
-        <div class="container split">
-          <div>
-            <span class="label">
-              Our commitments
-            </span>
+      </div>
 
-            <h2>
-              How we work
-            </h2>
-          </div>
+    </section>
 
-          <div>
-            <h3>
-              Client-centered strategy
-            </h3>
 
-            <p>
-              Every dispute begins with the outcome that matters most to
-              the client.
-            </p>
+    <!-- PRINCIPLES -->
 
-            <h3>
-              Clear communication
-            </h3>
+    <section class="section section-alt">
 
-            <p>
-              We provide timely, candid advice so decision-makers remain
-              in control.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+      <div class="container">
 
-    <footer class="site-footer">
-      <div class="container footer-bottom">
-        <span>
-          © 2026 Anchor &amp; Sterling LLP.
+        <span class="label">
+          What Guides Us
         </span>
 
-        <a href="../contact/">
-          Contact the firm
-        </a>
-      </div>
-    </footer>
+        <h2>
+          A deliberate way of practicing law.
+        </h2>
 
-    <script src="../assets/script.js"></script>
-  </body>
+        <div class="principles-grid">
+
+          <article class="principle">
+
+            <span class="principle-number">
+              01
+            </span>
+
+            <h3>
+              Discipline
+            </h3>
+
+            <p>
+              We focus on the issues that matter most, developing
+              strategies grounded in careful preparation and clear
+              legal reasoning.
+            </p>
+
+          </article>
+
+
+          <article class="principle">
+
+            <span class="principle-number">
+              02
+            </span>
+
+            <h3>
+              Direct Counsel
+            </h3>
+
+            <p>
+              Clients receive straightforward advice and direct
+              engagement throughout the life of a matter.
+            </p>
+
+          </article>
+
+
+          <article class="principle">
+
+            <span class="principle-number">
+              03
+            </span>
+
+            <h3>
+              Long-Term Perspective
+            </h3>
+
+            <p>
+              We build relationships that extend beyond individual
+              disputes, with an emphasis on trust, continuity, and
+              sound judgment.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DARK STATEMENT -->
+
+    <section class="section section-dark">
+
+      <div class="container">
+
+        <div class="split">
+
+          <div>
+
+            <span class="label">
+              Our Philosophy
+            </span>
+
+            <h2>
+              Clear thinking under pressure.
+            </h2>
+
+            <p>
+              Difficult disputes require more than technical legal
+              knowledge. They require judgment, preparation, and the
+              ability to identify the path that best serves the
+              client's objectives.
+            </p>
+
+          </div>
+
+          <div>
+
+            <blockquote class="quote">
+              We believe strong advocacy begins with understanding the
+              problem clearly and preparing for every meaningful turn
+              the matter may take.
+            </blockquote>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <div class="split">
+
+          <div>
+
+            <h2>
+              Discuss a matter with our team.
+            </h2>
+
+          </div>
+
+          <div>
+
+            <a
+              class="button"
+              href="/contact/"
+            >
+              Contact the Firm
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <a
+            class="footer-brand"
+            href="/"
+          >
+            Anchor <span>&amp;</span> Sterling
+            <em>LLP</em>
+          </a>
+
+          <p>
+            Litigation · Disputes
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-title">
+            Navigation
+          </div>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="/firm/">The Firm</a>
+            </li>
+
+            <li>
+              <a href="/litigation-disputes/">
+                Practice Areas
+              </a>
+            </li>
+
+            <li>
+              <a href="/attorneys/">
+                Attorneys
+              </a>
+            </li>
+
+            <li>
+              <a href="/insights/">
+                Insights
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-title">
+            Contact
+          </div>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="/contact/">
+                Contact the Firm
+              </a>
+            </li>
+
+            <li>
+              <a href="/careers/">
+                Careers
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Anchor &amp; Sterling LLP. All rights reserved.
+        </span>
+
+        <span>
+          Litigation · Disputes
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       MOBILE MENU
+       ========================= -->
+
+  <script>
+    (function () {
+
+      const button = document.getElementById("menu-button");
+      const menu = document.getElementById("primary-menu");
+
+      if (!button || !menu) {
+        return;
+      }
+
+      button.addEventListener("click", function () {
+
+        const isOpen =
+          button.getAttribute("aria-expanded") === "true";
+
+        button.setAttribute(
+          "aria-expanded",
+          String(!isOpen)
+        );
+
+        menu.classList.toggle(
+          "open",
+          !isOpen
+        );
+
+      });
+
+    })();
+  </script>
+
+</body>
 </html>
