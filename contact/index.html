@@ -1,404 +1,296 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta
-      name="description"
-      content="Contact Anchor & Sterling LLP for strategic counsel in complex litigation and disputes."
-    >
+  <meta
+    name="description"
+    content="Contact Anchor & Sterling LLP for strategic counsel in complex litigation and disputes."
+  >
 
-    <meta name="theme-color" content="#102b3b">
+  <meta name="theme-color" content="#102b3b">
 
-    <title>Contact | Anchor & Sterling LLP</title>
+  <title>Contact | Anchor & Sterling LLP</title>
 
-    <link rel="stylesheet" href="../assets/styles.css">
-  </head>
+  <!-- IMPORTANT: your actual file is style.css -->
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
 
-  <body>
+<body>
 
-    <!-- =========================
-         ACCESSIBILITY
-         ========================= -->
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
 
-    <a class="skip-link" href="#main-content">
-      Skip to main content
-    </a>
+  <!-- =========================
+       HEADER
+       ========================= -->
 
+  <header class="site-header">
 
-    <!-- =========================
-         HEADER / NAVIGATION
-         ========================= -->
+    <div class="nav-shell">
 
-    <header class="site-header">
-      <div class="nav-shell">
+      <a class="wordmark" href="../">
+        Anchor
+        <span>&amp;</span>
+        Sterling
+        <em>LLP</em>
+      </a>
 
-        <a
-          class="wordmark"
-          href="../"
-          aria-label="Anchor & Sterling LLP, home"
-        >
-          Anchor
-          <span>&amp;</span>
-          Sterling
-          <em>LLP</em>
+      <button
+        class="menu-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-menu"
+        data-menu-button
+      >
+        Menu
+      </button>
+
+      <nav
+        id="primary-menu"
+        class="primary-nav"
+        data-menu
+        aria-label="Primary navigation"
+      >
+
+        <a href="../firm/">
+          The Firm
         </a>
 
-        <button
-          class="menu-button"
-          type="button"
-          aria-expanded="false"
-          aria-controls="primary-menu"
-          data-menu-button
+        <a href="../litigation-disputes/">
+          Practice Areas
+        </a>
+
+        <a href="../attorneys/">
+          Attorneys
+        </a>
+
+        <a href="../insights/">
+          Insights
+        </a>
+
+        <a href="../careers/">
+          Careers
+        </a>
+
+        <a
+          class="nav-contact"
+          href="../contact/"
+          aria-current="page"
         >
-          <span class="sr-only">Open navigation</span>
-          <span aria-hidden="true">Menu</span>
-        </button>
+          Contact
+        </a>
 
-        <nav
-          id="primary-menu"
-          class="primary-nav"
-          data-menu
-          aria-label="Primary navigation"
-        >
-          <a href="../firm/">
-            The Firm
-          </a>
+      </nav>
 
-          <a href="../litigation-disputes/">
-            Practice Areas
-          </a>
+    </div>
 
-          <a href="../attorneys/">
-            Attorneys
-          </a>
+  </header>
 
-          <a href="../insights/">
-            Insights
-          </a>
 
-          <a href="../careers/">
-            Careers
-          </a>
+  <!-- =========================
+       MAIN
+       ========================= -->
 
-          <a
-            class="nav-contact"
-            href="../contact/"
-            aria-current="page"
-          >
-            Contact
-          </a>
-        </nav>
+  <main id="main-content">
 
-      </div>
-    </header>
+    <!-- PAGE INTRO -->
 
-
-    <!-- =========================
-         MAIN CONTENT
-         ========================= -->
-
-    <main id="main-content">
-
-      <!-- PAGE INTRO -->
-
-      <section class="page-intro">
-        <div class="container">
-
-          <p class="breadcrumbs">
-            <a href="../">Home</a>
-            <span aria-hidden="true"> / </span>
-            Contact
-          </p>
-
-          <h1>
-            Contact
-          </h1>
-
-          <p>
-            Start a conversation with Anchor &amp; Sterling LLP.
-          </p>
-
-        </div>
-      </section>
-
-
-      <!-- CONTACT SECTION -->
-
-      <section class="section">
-        <div class="container contact-grid">
-
-          <!-- LEFT COLUMN -->
-
-          <div>
-
-            <span class="label">
-              Contact the firm
-            </span>
-
-            <h2>
-              How can we help?
-            </h2>
-
-            <p>
-              Whether you are facing a complex dispute, preparing for
-              significant litigation, or seeking strategic legal counsel,
-              we welcome the opportunity to understand your circumstances.
-            </p>
-
-            <p>
-              Use the form to request contact from the firm. Please do not
-              include confidential, time-sensitive, or privileged information
-              in your initial message.
-            </p>
-
-
-            <ul class="contact-list">
-
-              <li>
-                <strong>
-                  Office
-                </strong>
-
-                [Insert verified office address]
-              </li>
-
-              <li>
-                <strong>
-                  Telephone
-                </strong>
-
-                [Insert verified telephone number]
-              </li>
-
-              <li>
-                <strong>
-                  Email
-                </strong>
-
-                [Insert verified general inquiry email]
-              </li>
-
-            </ul>
-
-          </div>
-
-
-          <!-- RIGHT COLUMN -->
-
-          <div>
-
-            <form
-              data-contact-form
-              novalidate
-            >
-
-              <div class="form-field">
-
-                <label for="name">
-                  Name
-                </label>
-
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  autocomplete="name"
-                  required
-                >
-
-              </div>
-
-
-              <div class="form-field">
-
-                <label for="email">
-                  Email address
-                </label>
-
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  required
-                >
-
-              </div>
-
-
-              <div class="form-field">
-
-                <label for="message">
-                  How may we assist?
-                </label>
-
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  aria-describedby="form-warning"
-                ></textarea>
-
-              </div>
-
-
-              <p
-                id="form-warning"
-                class="form-note"
-              >
-                Do not send confidential information. Submitting this form
-                does not create an attorney-client relationship.
-              </p>
-
-
-              <button
-                class="button"
-                type="submit"
-              >
-                Send inquiry
-              </button>
-
-
-              <p
-                class="form-status"
-                role="status"
-                aria-live="polite"
-              ></p>
-
-            </form>
-
-          </div>
-
-        </div>
-      </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-         ========================= -->
-
-    <footer class="site-footer">
+    <section class="page-intro">
 
       <div class="container">
 
-        <div class="footer-grid">
+        <p class="breadcrumbs">
+          <a href="../">Home</a>
+          <span aria-hidden="true"> / </span>
+          Contact
+        </p>
 
-          <div>
+        <h1>
+          Contact
+        </h1>
 
-            <a
-              class="wordmark"
-              href="../"
-              aria-label="Anchor & Sterling LLP, home"
-            >
-              Anchor
-              <span>&amp;</span>
-              Sterling
-              <em>LLP</em>
-            </a>
+        <p>
+          Start a conversation with Anchor &amp; Sterling LLP.
+        </p>
 
-            <p>
-              Strategic counsel for complex litigation and disputes.
-            </p>
+      </div>
 
-          </div>
+    </section>
 
 
-          <div>
+    <!-- CONTACT SECTION -->
 
-            <div class="footer-title">
-              Navigate
-            </div>
+    <section class="section">
 
-            <ul class="footer-links">
+      <div class="container contact-grid">
 
-              <li>
-                <a href="../firm/">
-                  The Firm
-                </a>
-              </li>
+        <div>
 
-              <li>
-                <a href="../litigation-disputes/">
-                  Practice Areas
-                </a>
-              </li>
+          <span class="label">
+            Contact the firm
+          </span>
 
-              <li>
-                <a href="../attorneys/">
-                  Attorneys
-                </a>
-              </li>
+          <h2>
+            How can we help?
+          </h2>
 
-              <li>
-                <a href="../insights/">
-                  Insights
-                </a>
-              </li>
+          <p>
+            Use this form to request contact. Do not include confidential,
+            time-sensitive, or privileged information.
+          </p>
 
-            </ul>
+          <ul class="contact-list">
 
-          </div>
+            <li>
+              <strong>
+                Office
+              </strong>
 
+              [Insert verified office address]
+            </li>
 
-          <div>
+            <li>
+              <strong>
+                Telephone
+              </strong>
 
-            <div class="footer-title">
-              Connect
-            </div>
+              [Insert verified telephone number]
+            </li>
 
-            <ul class="footer-links">
+            <li>
+              <strong>
+                Email
+              </strong>
 
-              <li>
-                <a href="../contact/">
-                  Contact
-                </a>
-              </li>
+              [Insert verified general inquiry email]
+            </li>
 
-              <li>
-                <a href="../careers/">
-                  Careers
-                </a>
-              </li>
-
-              <li>
-                <a href="../privacy/">
-                  Privacy
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
+          </ul>
 
         </div>
 
 
-        <div class="footer-bottom">
+        <!-- CONTACT FORM -->
 
-          <span>
-            © 2026 Anchor &amp; Sterling LLP.
-          </span>
+        <div>
 
-          <a href="../privacy/">
-            Privacy
-          </a>
+          <form data-contact-form novalidate>
+
+            <div class="form-field">
+
+              <label for="name">
+                Name
+              </label>
+
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-field">
+
+              <label for="email">
+                Email address
+              </label>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-field">
+
+              <label for="message">
+                How may we assist?
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                required
+                aria-describedby="form-warning"
+              ></textarea>
+
+            </div>
+
+
+            <p
+              id="form-warning"
+              class="form-note"
+            >
+              Do not send confidential information.
+              Submitting this form does not create an
+              attorney-client relationship.
+            </p>
+
+
+            <button
+              class="button"
+              type="submit"
+            >
+              Send inquiry
+            </button>
+
+
+            <p
+              class="form-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+
+          </form>
 
         </div>
 
       </div>
 
-    </footer>
+    </section>
+
+  </main>
 
 
-    <!-- =========================
-         JAVASCRIPT
-         ========================= -->
+  <!-- =========================
+       FOOTER
+       ========================= -->
 
-    <script src="../assets/app.js"></script>
+  <footer class="site-footer">
 
-  </body>
+    <div class="container">
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Anchor &amp; Sterling LLP.
+        </span>
+
+        <a href="../privacy/">
+          Privacy
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- IMPORTANT: your actual JavaScript file is script.js -->
+  <script src="../assets/script.js"></script>
+
+</body>
 </html>
